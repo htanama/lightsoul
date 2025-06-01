@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="3d-rpg-game-tutorial"
+config/name="Light Soul"
 run/main_scene="uid://bu4fd8q33w8ss"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="uid://sufjh08omcc2"
