@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnok622gwugum"]
+
+[ext_resource type="Script" uid="uid://dsdso7pxogej" path="res://Scripts/player/GUI/Inventory/inventory_main.gd" id="1_hwbpb"]
+[ext_resource type="Script" uid="uid://r8hhc33j3jri" path="res://Scripts/player/GUI/Inventory/inventory_slot.gd" id="2_ohgh7"]
+
+[node name="inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_hwbpb")
+
+[node name="grid" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 192.0
+offset_right = 888.0
+offset_bottom = 456.0
+columns = 6
+
+[node name="right_hand" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 264.0
+offset_right = 464.0
+offset_bottom = 304.0
+script = ExtResource("2_ohgh7")
+metadata/_custom_type_script = "uid://r8hhc33j3jri"
+
+[node name="body" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 264.0
+offset_right = 400.0
+offset_bottom = 304.0
+script = ExtResource("2_ohgh7")
+type = 2
+metadata/_custom_type_script = "uid://r8hhc33j3jri"
+
+[node name="head" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 200.0
+offset_right = 400.0
+offset_bottom = 240.0
+script = ExtResource("2_ohgh7")
+type = 1
+metadata/_custom_type_script = "uid://r8hhc33j3jri"
+
+[node name="legs" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 328.0
+offset_right = 400.0
+offset_bottom = 368.0
+script = ExtResource("2_ohgh7")
+type = 3
+metadata/_custom_type_script = "uid://r8hhc33j3jri"
+
+[node name="feet" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 392.0
+offset_right = 400.0
+offset_bottom = 432.0
+script = ExtResource("2_ohgh7")
+type = 4
+metadata/_custom_type_script = "uid://r8hhc33j3jri"

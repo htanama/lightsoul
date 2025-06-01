@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cu4u2hh7cvmgo"]
+
+[ext_resource type="Texture2D" uid="uid://bdlj6qp6ng13e" path="res://Assets/16x16 RPG Item Pack/Item__25.png" id="1_mcxdu"]
+[ext_resource type="Script" uid="uid://bl2w1tqn166m1" path="res://Scripts/player/GUI/Inventory/item_data.gd" id="2_qsgl0"]
+
+[resource]
+script = ExtResource("2_qsgl0")
+type = 0
+item_name = "Iron Shield"
+item_damage = 0
+item_health = 0
+item_defense = 4
+stackable = false
+count = 0
+description = "This is a small potion that heals you"
+item_texture = ExtResource("1_mcxdu")

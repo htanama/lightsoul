@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4et86dp6jn5o"]
+
+[ext_resource type="Script" uid="uid://be1kbftsjutkq" path="res://Scripts/player/GUI/profile.gd" id="1_ir71g"]
+
+[node name="profile" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 192.0
+offset_top = 128.0
+offset_right = 232.0
+offset_bottom = 168.0
+script = ExtResource("1_ir71g")
+
+[node name="stats_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 120.0
+offset_right = 488.0
+offset_bottom = 256.0
+text = "This is a test"
+horizontal_alignment = 1
+vertical_alignment = 1

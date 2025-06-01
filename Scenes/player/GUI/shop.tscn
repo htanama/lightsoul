@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnnnaxwgkd6gk"]
+
+[ext_resource type="Script" uid="uid://c8l8uetldxxqn" path="res://Scripts/player/GUI/shop.gd" id="1_jqoik"]
+[ext_resource type="Texture2D" uid="uid://cqvj65d1xu4wi" path="res://Assets/16x16 RPG Item Pack/Item__00.png" id="1_oovr0"]
+
+[node name="shop" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_jqoik")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 1088.0
+offset_bottom = 568.0
+metadata/_edit_lock_ = true
+
+[node name="shop_items" type="GridContainer" parent="."]
+offset_left = 704.0
+offset_top = 128.0
+offset_right = 864.0
+offset_bottom = 216.0
+
+[node name="item_info" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="item_name" type="Label" parent="item_info"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 88.0
+offset_right = 456.0
+offset_bottom = 138.0
+theme_override_font_sizes/font_size = 41
+text = "Sword"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="item_desc" type="Label" parent="item_info"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 384.0
+offset_right = 488.0
+offset_bottom = 520.0
+text = "This is an item descr.."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="item_sprite" type="Sprite2D" parent="item_info"]
+position = Vector2(336, 264)
+scale = Vector2(13.329, 13)
+texture = ExtResource("1_oovr0")
+
+[node name="buy_button" type="Button" parent="."]
+offset_left = 544.0
+offset_top = 512.0
+offset_right = 655.0
+offset_bottom = 551.0
+text = "Buy"
+
+[node name="buy_complete" type="Label" parent="buy_button"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = -88.0
+offset_right = 284.0
+offset_bottom = -46.0
+theme_override_font_sizes/font_size = 35
+text = "Buy Complete"
+
+[node name="close_button" type="Button" parent="."]
+offset_left = 936.0
+offset_top = 512.0
+offset_right = 1059.0
+offset_bottom = 551.0
+text = "Close"
+
+[connection signal="pressed" from="buy_button" to="." method="_on_buy_button_pressed"]
+[connection signal="pressed" from="close_button" to="." method="_on_close_button_pressed"]

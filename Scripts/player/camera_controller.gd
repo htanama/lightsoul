@@ -1,0 +1,29 @@
+extends Node3D
+
+var camroot_h: float = 0
+var camroot_v: float = 0
+@export var cam_v_max: int = 40
+@export var cam_v_min: int = 0
+var h_sensitivity: float = 0.01
+var v_sensitivity: float = 0.01
+var h_acceleration: float = 10.0
+var v_acceleration: float = 10.0
+
+func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_cancel"):
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		
+	if event is InputEventMouseMotion:
+		camroot_h += -event.relative.x * h_sensitivity
+		camroot_v += event.relative.x * v_sensitivity
+
+
+func _physics_process(delta: float) -> void:
+	camroot_v = clamp(camroot_v, deg_to_rad(cam_v_min), deg_to_rad(cam_v_max))
+	get_node("h").rotation.y = lerp(get_node("h").rotation.y, camroot_h, delta * h_acceleration)
+	get_node("h/v").rotation.x = lerp(get_node("h/v").rotation.x, camroot_v, delta * v_acceleration)
+	pass
