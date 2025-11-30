@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://bu4fd8q33w8ss"]
 
 [ext_resource type="MeshLibrary" uid="uid://dedo6hq6thihg" path="res://Scenes/Levels/library.tres" id="1_qv0vd"]
-[ext_resource type="PackedScene" uid="uid://babm5ntdtysl2" path="res://Scenes/player/player.tscn" id="2_4t3b5"]
 [ext_resource type="PackedScene" uid="uid://ndt2gl7crb37" path="res://Scenes/Monster/skeleton_warrior_monster.tscn" id="3_vnbq0"]
 [ext_resource type="PackedScene" uid="uid://l5jbb73evy3x" path="res://Scenes/player/GUI/gameover_overlay.tscn" id="4_o22s6"]
 [ext_resource type="PackedScene" uid="uid://dvjw3nw8mft2c" path="res://Scenes/player/GUI.tscn" id="5_nytic"]
 [ext_resource type="PackedScene" uid="uid://cemaxqh2cg6uw" path="res://Scenes/NPC Mage.tscn" id="6_e57xo"]
 [ext_resource type="PackedScene" uid="uid://c3ye7v12w0g74" path="res://Scenes/Torch.tscn" id="7_d80xo"]
 [ext_resource type="PackedScene" uid="uid://cngvsrm3t1m55" path="res://Scenes/chest.tscn" id="8_gk1sg"]
+[ext_resource type="PackedScene" uid="uid://babm5ntdtysl2" path="res://Scenes/player/player.tscn" id="8_st7rb"]
 
 [sub_resource type="Environment" id="Environment_vnbq0"]
 background_mode = 1
@@ -54,9 +54,6 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
-[node name="player" parent="." instance=ExtResource("2_4t3b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.3253, 0.974539, -59.0885)
-
 [node name="gameover_overlay" parent="." instance=ExtResource("4_o22s6")]
 process_mode = 3
 
@@ -64,41 +61,32 @@ process_mode = 3
 
 [node name="Monsters" type="Node3D" parent="."]
 
-[node name="skeleton_warrior_monster" parent="Monsters" node_paths=PackedStringArray("player") instance=ExtResource("3_vnbq0")]
+[node name="skeleton_warrior_monster" parent="Monsters" instance=ExtResource("3_vnbq0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.1511, 1.06682, 22.5234)
-player = NodePath("../../player")
 
-[node name="skeleton_warrior_monster5" parent="Monsters" node_paths=PackedStringArray("player") instance=ExtResource("3_vnbq0")]
+[node name="skeleton_warrior_monster5" parent="Monsters" instance=ExtResource("3_vnbq0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.1511, 1.06682, 7.48988)
-player = NodePath("../../player")
 
-[node name="skeleton_warrior_monster6" parent="Monsters" node_paths=PackedStringArray("player") instance=ExtResource("3_vnbq0")]
+[node name="skeleton_warrior_monster6" parent="Monsters" instance=ExtResource("3_vnbq0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.1511, 1.06682, 1.48988)
-player = NodePath("../../player")
 
-[node name="skeleton_warrior_monster7" parent="Monsters" node_paths=PackedStringArray("player") instance=ExtResource("3_vnbq0")]
+[node name="skeleton_warrior_monster7" parent="Monsters" instance=ExtResource("3_vnbq0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.1511, 1.06682, 23.4899)
-player = NodePath("../../player")
 
-[node name="skeleton_warrior_monster2" parent="Monsters" node_paths=PackedStringArray("player") instance=ExtResource("3_vnbq0")]
+[node name="skeleton_warrior_monster2" parent="Monsters" instance=ExtResource("3_vnbq0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.1511, 1.06682, -38.026)
-player = NodePath("../../player")
 
-[node name="skeleton_warrior_monster9" parent="Monsters" node_paths=PackedStringArray("player") instance=ExtResource("3_vnbq0")]
+[node name="skeleton_warrior_monster9" parent="Monsters" instance=ExtResource("3_vnbq0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.2659, 1.06682, -9.38035)
-player = NodePath("../../player")
 
-[node name="skeleton_warrior_monster8" parent="Monsters" node_paths=PackedStringArray("player") instance=ExtResource("3_vnbq0")]
+[node name="skeleton_warrior_monster8" parent="Monsters" instance=ExtResource("3_vnbq0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.4114, 1.06682, -10.4007)
-player = NodePath("../../player")
 
-[node name="skeleton_warrior_monster3" parent="Monsters" node_paths=PackedStringArray("player") instance=ExtResource("3_vnbq0")]
+[node name="skeleton_warrior_monster3" parent="Monsters" instance=ExtResource("3_vnbq0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.124, 1, -36.338)
-player = NodePath("../../player")
 
-[node name="skeleton_warrior_monster4" parent="Monsters" node_paths=PackedStringArray("player") instance=ExtResource("3_vnbq0")]
+[node name="skeleton_warrior_monster4" parent="Monsters" instance=ExtResource("3_vnbq0")]
 transform = Transform3D(0.154503, 0, -0.987992, 0, 1, 0, 0.987992, 0, 0.154503, -43.3077, 1.06682, -11.2393)
-player = NodePath("../../player")
 
 [node name="Projectile" type="Node3D" parent="."]
 
@@ -219,3 +207,6 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 34.216
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.773, 0.0510082, 35.101)
 
 [node name="Items" type="Node3D" parent="."]
+
+[node name="player" parent="." instance=ExtResource("8_st7rb")]
+transform = Transform3D(0.406338, 0, 0.913723, 0, 1, 0, -0.913723, 0, 0.406338, -73.414, 1, -61.87)

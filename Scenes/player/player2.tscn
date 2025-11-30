@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbw4ku65ht7p7"]
+
+[ext_resource type="PackedScene" uid="uid://b160m7soc5iob" path="res://Assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Mage.glb" id="1_c0h8u"]
+[ext_resource type="Script" uid="uid://dy80gf1dcegpq" path="res://Scripts/player/player2.gd" id="1_fyy7d"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c0h8u"]
+radius = 0.613654
+height = 2.66835
+
+[node name="Player2" type="CharacterBody3D"]
+script = ExtResource("1_fyy7d")
+
+[node name="Mage" parent="." instance=ExtResource("1_c0h8u")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.36169, 0)
+shape = SubResource("CapsuleShape3D_c0h8u")
+
+[node name="CameraLocation" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.347, 8)
+
+[node name="Camera3D" type="Camera3D" parent="CameraLocation"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.339741, -2.2198)
