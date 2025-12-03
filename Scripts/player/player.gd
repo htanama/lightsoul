@@ -47,7 +47,7 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
-		aim_turn = -event.relative.x * 0.015
+		aim_turn = -event.relative.x  * 0.015 #0.015
 	if event.is_action_pressed("aim"):
 		direction = camrot_h.global_transform.basis.z
 

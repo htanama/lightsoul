@@ -4,10 +4,10 @@ var camroot_h: float = 0
 var camroot_v: float = 0
 @export var cam_v_max: int = 40
 @export var cam_v_min: int = 0
-var h_sensitivity: float = 0.01
-var v_sensitivity: float = 0.01
-var h_acceleration: float = 10.0
-var v_acceleration: float = 10.0
+var h_sensitivity: float = 0.009  
+var v_sensitivity: float = 0.009  
+var h_acceleration: float = 5.0 #10
+var v_acceleration: float = 5.0 #10
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
